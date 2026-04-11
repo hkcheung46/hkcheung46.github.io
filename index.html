@@ -1,36 +1,237 @@
-Hello App Review Team,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App Support | Cheung Hoi Kit</title>
+  <meta name="description" content="Support page for apps published by Cheung Hoi Kit." />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
 
-Thank you for your review and feedback.
+    * { box-sizing: border-box; }
 
-We have addressed the reported issues as follows:
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-1. Guideline 4 - Sign in with Apple
-We updated the Sign in with Apple flow so that users are no longer required to provide their name or email address after signing in with Apple. Any nickname/profile field shown during onboarding is now optional and is not required to complete sign-in.
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
 
-2. Guideline 2.1 - Information Needed
-Yes, the app includes optional AI-powered features that use a third-party AI service.
+    .hero {
+      background: linear-gradient(135deg, #ffffff, #eef4ff);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
 
-These features are only used when the user actively chooses to use them, such as:
+    .contact-box {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      display: inline-block;
+    }
 
-receipt scanning / receipt analysis
-AI-generated finance-related feedback
-optional text-based AI assistance related to the user’s expense inputs
-The data that may be sent for these optional features includes:
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
 
-receipt images submitted by the user
-expense descriptions or transaction-related text entered by the user
-optional finance-related prompts or text entered by the user
-This data is sent solely for the purpose of generating the AI response requested by the user. We do not use Sign in with Apple credentials for AI processing.
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
 
-We do not use this data for advertising purposes. The data handling is limited to supporting the requested app functionality and is disclosed in the app’s privacy documentation.
+    .app-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
 
-3. Guideline 1.5 - Support URL
-We updated the Support URL to a functional support page that includes support contact information and links to the app’s privacy policy and terms of service:
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #fff;
+      flex-shrink: 0;
+    }
 
-https://hkcheung46.github.io/
+    .pink { background: linear-gradient(135deg, #ff4d8d, #ff7aa8); }
+    .green { background: linear-gradient(135deg, #22c55e, #16a34a); }
+    .blue { background: linear-gradient(135deg, #38bdf8, #2563eb); }
 
-Thank you for your time and consideration. Please let us know if any further information is needed.
+    .muted { color: var(--muted); }
 
-Best regards,
-Cheung Hoi Kit
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
 
+    .pill {
+      display: inline-block;
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--accent);
+      background: #f9fafb;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .pill:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (min-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .full {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>App Support</h1>
+      <p>
+        Welcome to the official support page for apps published by <strong>Cheung Hoi Kit</strong>.
+      </p>
+      <p>
+        If you need help, want to report a bug, or have account, subscription, or privacy questions,
+        please contact support using the details below.
+      </p>
+
+      <div class="contact-box">
+        📧 Support Email:
+        <a href="mailto:hkcheung2011@gmail.com">hkcheung2011@gmail.com</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card" id="oopsmoney">
+        <div class="app-head">
+          <div class="icon pink">🐷</div>
+          <div>
+            <h2>OopsMoney - 毒舌 AI 記帳</h2>
+            <div class="muted">Personal finance and expense tracking</div>
+          </div>
+        </div>
+        <p class="muted">
+          OopsMoney helps users track expenses and better understand spending habits.
+        </p>
+        <div class="links">
+          <a class="pill" href="https://sites.google.com/view/oopsmoneyprivacypolicy/home" target="_blank" rel="noopener">Privacy Policy</a>
+          <a class="pill" href="https://sites.google.com/view/oopsmoneytermsconditions/home" target="_blank" rel="noopener">Terms of Service</a>
+          <a class="pill" href="mailto:hkcheung2011@gmail.com?subject=OopsMoney%20Support">Email Support</a>
+        </div>
+      </section>
+
+      <section class="card" id="mahjong">
+        <div class="app-head">
+          <div class="icon green">🀄</div>
+          <div>
+            <h2>開枱鳥 - 麻將計分器</h2>
+            <div class="muted">Mahjong scoring assistant</div>
+          </div>
+        </div>
+        <p class="muted">
+          A scorekeeping app for mahjong sessions and round tracking.
+        </p>
+        <div class="links">
+          <a class="pill" href="https://sites.google.com/view/mahjong-assistant-privacy-pol/home" target="_blank" rel="noopener">Privacy Policy</a>
+          <a class="pill" href="https://sites.google.com/view/opendeskbirdtos/home" target="_blank" rel="noopener">Terms of Service</a>
+          <a class="pill" href="mailto:hkcheung2011@gmail.com?subject=%E9%96%8B%E6%9E%B1%E9%B3%A5%20Support">Email Support</a>
+        </div>
+      </section>
+
+      <section class="card" id="openball">
+        <div class="app-head">
+          <div class="icon blue">🏸</div>
+          <div>
+            <h2>OpenBall - 香港羽毛球場預約</h2>
+            <div class="muted">Badminton booking helper</div>
+          </div>
+        </div>
+        <p class="muted">
+          OpenBall helps users browse and manage badminton court booking information.
+        </p>
+        <div class="links">
+          <a class="pill" href="https://sites.google.com/view/openballprivacypolicy/home" target="_blank" rel="noopener">Privacy Policy</a>
+          <a class="pill" href="https://sites.google.com/view/opendeskbirdtos/home" target="_blank" rel="noopener">Terms of Service</a>
+          <a class="pill" href="mailto:hkcheung2011@gmail.com?subject=OpenBall%20Support">Email Support</a>
+        </div>
+      </section>
+
+      <section class="card full">
+        <h2>General Help</h2>
+        <ul>
+          <li>Include the app name</li>
+          <li>Include your device model and iOS version</li>
+          <li>Describe the issue briefly</li>
+        </ul>
+      </section>
+
+      <section class="card full">
+        <h2>Advertising Verification</h2>
+        <p>
+          Advertising file:
+          <a href="/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      Last updated: April 11, 2026
+    </footer>
+  </div>
+</body>
+</html>
