@@ -7,57 +7,156 @@
   <meta name="description" content="Support page for apps published by Cheung Hoi Kit." />
   <style>
     :root {
-      --bg: #f6f8fb;
+      --bg: #f4f7fb;
       --card: #ffffff;
       --text: #1f2937;
       --muted: #6b7280;
       --accent: #2563eb;
+      --accent-soft: #eff6ff;
       --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
       color: var(--text);
       line-height: 1.6;
     }
+
     .wrap {
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 32px 20px 60px;
     }
-    .hero, .card {
+
+    .hero {
+      background: linear-gradient(135deg, #ffffff, #eef4ff);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    .hero p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: var(--accent-soft);
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 20px;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
     }
-    .hero h1, .card h2 { margin-top: 0; }
-    .muted { color: var(--muted); }
+
+    .app-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .pink { background: linear-gradient(135deg, #ff4d8d, #ff7aa8); }
+    .green { background: linear-gradient(135deg, #22c55e, #16a34a); }
+    .blue { background: linear-gradient(135deg, #38bdf8, #2563eb); }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 12px;
+      margin-top: 14px;
     }
+
     .pill {
       display: inline-block;
-      padding: 8px 12px;
+      padding: 9px 13px;
       border: 1px solid var(--border);
       border-radius: 999px;
       text-decoration: none;
       color: var(--accent);
       background: #f9fafb;
       font-size: 14px;
+      font-weight: 500;
     }
-    .pill:hover { text-decoration: underline; }
-    a { color: var(--accent); }
+
+    .pill:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+    }
+
     footer {
       margin-top: 24px;
+      text-align: center;
       font-size: 14px;
       color: var(--muted);
+    }
+
+    @media (min-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .full {
+        grid-column: 1 / -1;
+      }
     }
   </style>
 </head>
@@ -65,71 +164,92 @@
   <div class="wrap">
     <section class="hero">
       <h1>App Support</h1>
-      <p class="muted">
-        This website provides support information for apps published by Cheung Hoi Kit.
-        If you need help, want to report a bug, or have privacy/account questions, please contact us.
+      <p>
+        Welcome to the official support page for apps published by <strong>Cheung Hoi Kit</strong>.
       </p>
       <p>
-        Support email:
+        If you need help with an app, want to report a bug, or have account/privacy questions,
+        please contact support using the details below.
+      </p>
+
+      <div class="contact-box">
+        📧 Support Email:
         <a href="mailto:hkcheung46@gmail.com">hkcheung46@gmail.com</a>
-      </p>
-    </section>
-
-    <section class="card" id="oopsmoney">
-      <h2>1. OopsMoney - 毒舌 AI 記帳</h2>
-      <p class="muted">
-        A personal finance app for tracking expenses and building better money habits.
-      </p>
-      <div class="links">
-        <a class="pill" href="https://sites.google.com/view/oopsmoneyprivacypolicy/home" target="_blank" rel="noopener">Privacy Policy</a>
-        <a class="pill" href="https://sites.google.com/view/oopsmoneytermsconditions/home" target="_blank" rel="noopener">Terms &amp; Conditions</a>
       </div>
     </section>
 
-    <section class="card" id="mahjong">
-      <h2>2. 開枱鳥 - 麻將計分器</h2>
-      <p class="muted">
-        A mahjong score tracking app for recording rounds and managing game results.
-      </p>
-      <div class="links">
-        <a class="pill" href="mailto:hkcheung46@gmail.com?subject=%E9%96%8B%E6%9E%B1%E9%B3%A5%20Support">Email Support</a>
-      </div>
-    </section>
+    <div class="grid">
+      <section class="card" id="oopsmoney">
+        <div class="app-head">
+          <div class="icon pink">🐷</div>
+          <div>
+            <h2>OopsMoney - 毒舌 AI 記帳</h2>
+            <div class="muted">Personal finance and expense tracking</div>
+          </div>
+        </div>
+        <p class="muted">
+          OopsMoney helps users record expenses, review spending habits, and manage subscriptions and budgets.
+        </p>
+        <div class="links">
+          <a class="pill" href="https://sites.google.com/view/oopsmoneyprivacypolicy/home" target="_blank" rel="noopener">Privacy Policy</a>
+          <a class="pill" href="https://sites.google.com/view/oopsmoneytermsconditions/home" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+          <a class="pill" href="mailto:hkcheung46@gmail.com?subject=OopsMoney%20Support">Email Support</a>
+        </div>
+      </section>
 
-    <section class="card" id="openball">
-      <h2>3. OpenBall - 香港羽毛球場預約</h2>
-      <p class="muted">
-        An app to help users browse and manage badminton court booking information in Hong Kong.
-      </p>
-      <div class="links">
-        <a class="pill" href="mailto:hkcheung46@gmail.com?subject=OpenBall%20Support">Email Support</a>
-      </div>
-    </section>
+      <section class="card" id="mahjong">
+        <div class="app-head">
+          <div class="icon green">🀄</div>
+          <div>
+            <h2>開枱鳥 - 麻將計分器</h2>
+            <div class="muted">Mahjong scoring and game tracking</div>
+          </div>
+        </div>
+        <p class="muted">
+          A scorekeeping app for mahjong sessions, designed to help players record rounds and results easily.
+        </p>
+        <div class="links">
+          <a class="pill" href="mailto:hkcheung46@gmail.com?subject=%E9%96%8B%E6%9E%B1%E9%B3%A5%20Support">Email Support</a>
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>General Support</h2>
-      <p>
-        For all app support requests, please email
-        <a href="mailto:hkcheung46@gmail.com">hkcheung46@gmail.com</a>.
-      </p>
-      <p>
-        Please include:
-      </p>
-      <ul>
-        <li>App name</li>
-        <li>Device model</li>
-        <li>iOS version</li>
-        <li>A short description of the issue</li>
-      </ul>
-    </section>
+      <section class="card" id="openball">
+        <div class="app-head">
+          <div class="icon blue">🏸</div>
+          <div>
+            <h2>OpenBall - 香港羽毛球場預約</h2>
+            <div class="muted">Badminton court booking helper</div>
+          </div>
+        </div>
+        <p class="muted">
+          OpenBall helps users browse and manage badminton court booking information in Hong Kong.
+        </p>
+        <div class="links">
+          <a class="pill" href="mailto:hkcheung46@gmail.com?subject=OpenBall%20Support">Email Support</a>
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>Advertising Verification</h2>
-      <p>
-        Advertising file:
-        <a href="/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
-      </p>
-    </section>
+      <section class="card full">
+        <h2>General Help</h2>
+        <p>
+          When contacting support, please include:
+        </p>
+        <ul>
+          <li>App name</li>
+          <li>Device model</li>
+          <li>iOS version</li>
+          <li>A short description of the issue</li>
+        </ul>
+      </section>
+
+      <section class="card full">
+        <h2>Advertising Verification</h2>
+        <p>
+          Advertising file:
+          <a href="/app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
+        </p>
+      </section>
+    </div>
 
     <footer>
       Last updated: April 11, 2026
